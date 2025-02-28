@@ -17,6 +17,10 @@
 </template>
 
 <script>
+import Contact from './components/Contact.vue';
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
+createApp(index).mount('#index');
     export default{
         data(){
             return {
