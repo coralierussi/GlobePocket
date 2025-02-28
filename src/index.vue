@@ -17,7 +17,7 @@
 //import Header from './components/Header.vue';
 //import Footer from './components/Footer.vue';
 //import Contact from './components/Contact.vue';
-createApp(index).mount('#index');
+// createApp(index).mount('#index');
     export default{
         name:'Index',
         data(){
