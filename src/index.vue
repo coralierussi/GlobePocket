@@ -13,9 +13,6 @@
                 </div>
             </header>
         </template>
-    <footer>
-        <a class="link-footer" href="./Contact.html">Contact</a>
-    </footer>
     </v-main>
 </template>
 
