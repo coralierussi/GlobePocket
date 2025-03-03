@@ -1,4 +1,4 @@
-# webSiteGP
+# globe-pocket
 
 ## Project setup
 ```
