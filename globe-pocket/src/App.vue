@@ -1,11 +1,11 @@
 <template>
   <main id="app">
-    <div class="header d-flex">
+    <div class="header">
         <div class="logo">
-            <p class="logo-img" src="" alt=""/>
+            <p class="logo-img" src="./App.vue" alt="Logo de Globe Pocket"/>
         </div>
-        <div class="navbar d-flex">
-            <a class="link-header" href="/main.vue">Accueil</a>
+        <div class="navbar">
+            <a class="link-header" href="./App.vue">Accueil</a>
             <p class="link-header">Pays</p>
             <p class="link-header">Activités</p>
             <p class="link-header">Transports</p>
@@ -13,11 +13,12 @@
             <p class="link-header">Locations</p>
         </div>
         <div class="compte">
-            <p class="compte-img" src="/assests/SiteCSS/user.png" alt=""/>
+            <p class="compte-img" src="./assets/SiteCSS/user.png" alt=""/>
         </div>
     </div>
     <div class="presentation">
         <div class="carousel">
+            <img class="carousel-images" src="./assets/SiteCSS/voyage-2.png" alt="">
             <div class="en-tete">
                 <p class="title">Suivez vos envies</p>
             </div>
@@ -28,7 +29,7 @@
 
         </div>
         <div class="img">
-            <img class="img-globe" src="/assests/earth.jpg" alt="">
+            <img class="img-globe" src="./assets/SiteCSS/earth.jpg" alt="">
         </div>
     </div>
   </main>
@@ -52,13 +53,14 @@ export default {
 <style scss scoped>
 
 *{
-        margin: 0%;
-        padding: 0%;
-    }
+    margin: 0%;
+    padding: 0%;
+
     a{
         text-decoration: none;
     }
     .header{
+        display: flex;
         background-color: #7BB27F;
         width: 100%;
         height: 60px;
@@ -73,6 +75,7 @@ export default {
             }
         }
         .navbar{
+            display: flex;
             margin-left: auto;
             width: 60%;
             .link-header{
@@ -94,34 +97,42 @@ export default {
         }
     }
     .presentation{
-            .carousel-images {
-                display: flex;
-                position: fixed;
-                width: 200%;
-                animation: slide 4s infinite alternate ease-in-out;
-                z-index: 1;
-            }
-            .carousel img {
-                width: 100%;
-                height: auto;
-            }
-            @keyframes slide {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(-50%); }
-            }
-            .en-tete{
-                position: fixed;
-                width: 40%;
-                background-color: rgb(158, 158, 158);
-                border-radius: 50px;
-                margin-top: 20%;
-                margin-left: 30%;
-                z-index: 10000;
-                .title{
-                    color: white;
-                    font-size: 50px;
-                    text-align: center;
-                }
+        .carousel-images {
+            display: flex;
+            position: relative;
+            width: 200%;
+            animation: slide 4s infinite alternate ease-in-out;
+            z-index: 1;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+        }
+        /* @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        } */
+        .en-tete{
+            position: absolute;
+            width: 40%;
+            background-color: rgb(158, 158, 158);
+            border-radius: 50px;
+            /* margin-top: 20%;
+            margin-left: 30%; */
+            z-index: 10;
+            .title{
+                color: white;
+                font-size: 50px;
+                text-align: center;
             }
         }
+    }
+    .globe{
+        .img{
+            .img-globe{
+                width: 50%;
+            }
+        }
+    }
+}
 </style>
