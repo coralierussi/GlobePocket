@@ -27,7 +27,7 @@ sequenceDiagram
 
 ```
 
-![Image de diagramme de séquence paiement pour voyage](image.png)
+![Image de diagramme de séquence paiement pour voyage](/assests/Diagram/image.png)
 
 ## Diagramme de classe
 
@@ -62,7 +62,7 @@ Utilisateur --|> PGM : "interagit avec"
 PGM --|> Banque : "Envoie transaction à"
 PGM --|> BaseDeDonnees : "Met à jour"
 ```
-![Image diagramme de classe paiment voyage](image-3.png)
+![Image diagramme de classe paiment voyage](/assests/Diagram/image-3.png)
 
 # Diagramme de séquence
 ### Paiement de la version premium
@@ -99,7 +99,7 @@ sequenceDiagram
     PGM->>Base de Données: Met à jour informations utilisateur donnée bancaire
     Base de Données->>PGM: Confirmation de mise à jour
 ```
-![Image de diagramme de séquence paiement abonnement](image-2.png)
+![Image de diagramme de séquence paiement abonnement](/assests/Diagram/image-2.png)
 
 ## Diagramme de classe
 
@@ -138,4 +138,4 @@ PGM --|> Banque : "Envoie transaction à"
 PGM --|> BaseDeDonnees : "Met à jour"
 PGM --|> Utilisateur : "Envoie emails"
 ```
-![Image de diagramme de séquence paiement abonnement](image-5.png)
+![Image de diagramme de séquence paiement abonnement](/assests/Diagram/image-5.png)
