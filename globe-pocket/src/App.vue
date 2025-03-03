@@ -1,6 +1,22 @@
 <template>
-  <div id="app">
-    <div class="head">
+  <main id="app">
+    <div class="header d-flex">
+        <div class="logo">
+            <p class="logo-img" src="" alt=""/>
+        </div>
+        <div class="navbar d-flex">
+            <a class="link-header" href="/main.vue">Accueil</a>
+            <p class="link-header">Pays</p>
+            <p class="link-header">Activités</p>
+            <p class="link-header">Transports</p>
+            <p class="link-header">Hébergements</p>
+            <p class="link-header">Locations</p>
+        </div>
+        <div class="compte">
+            <p class="compte-img" src="/assests/SiteCSS/user.png" alt=""/>
+        </div>
+    </div>
+    <div class="presentation">
         <div class="carousel">
             <div class="en-tete">
                 <p class="title">Suivez vos envies</p>
@@ -15,39 +31,69 @@
             <img class="img-globe" src="/assests/earth.jpg" alt="">
         </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
-import footer from './components/Footer.vue';
-import header from './components/Header.vue';
-
+// import FooterSite from './components/Footer.vue';
+// import HeaderSite from './components/Header.vue';
 
 export default {
-  name: 'App',
-  components: { header, footer },
+//   components: { HeaderSite, FooterSite },
+
+  data(){
+    return {
+
+    }
+  },
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scss scoped>
+
 *{
         margin: 0%;
         padding: 0%;
     }
-    .head{
-        /*.carousel{
-            width: 400px;
-            height: 250px;
-            overflow: hidden;
-            position: relative;*/
+    a{
+        text-decoration: none;
+    }
+    .header{
+        background-color: #7BB27F;
+        width: 100%;
+        height: 60px;
+        .logo{
+            width: 20%;
+            .logo-img{
+                border-radius: 100%;
+                background-color: grey;
+                width: 50px;
+                height: 50px;
+                margin: 5px;
+            }
+        }
+        .navbar{
+            margin-left: auto;
+            width: 60%;
+            .link-header{
+                color: black;
+                padding-right: 5px;
+                margin: 0%;
+            }
+        }
+        .compte{
+            width: 15%;
+            .compte-img{
+                border-radius: 100%;
+                background-color: rgb(34, 34, 204);
+                width: 50px;
+                height: 50px;
+                margin: 5px 10px;
+                float: right;
+            }
+        }
+    }
+    .presentation{
             .carousel-images {
                 display: flex;
                 position: fixed;
