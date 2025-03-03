@@ -1,10 +1,7 @@
 <template>
+  <div id="app">
     <div class="head">
         <div class="carousel">
-            <!-- <div class="carousel-image"> -->
-                <img class="carousel-images" src="/assests/voyage-2.png" alt="Image 2">
-                <img src="/assets/voyage-1.png" alt="Image 1">
-             <!--</div>-->
             <div class="en-tete">
                 <p class="title">Suivez vos envies</p>
             </div>
@@ -18,21 +15,30 @@
             <img class="img-globe" src="/assests/earth.jpg" alt="">
         </div>
     </div>
+  </div>
 </template>
 
 <script>
+import footer from './components/Footer.vue';
+import header from './components/Header.vue';
 
-export default{
-    data (){
-        return {
-            
-        }
-    }
+
+export default {
+  name: 'App',
+  components: { header, footer },
 }
 </script>
 
-<style scss scoped>
-    *{
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+*{
         margin: 0%;
         padding: 0%;
     }
